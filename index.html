@@ -1,16 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Frontend Avanzado Ejercicio práctico clase 1</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Frontend Avanzado · Ejercicio práctico clase 1 (React)</title>
   </head>
   <body>
-    <h1>Con lo visto hasta ahora</h1>
-    <h2>Replica este HTML</h2>
-    <h3>Usando</h3>
-    <h4>React.js</h4>
-    <footer>Suerte!</footer>
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script>
+      // Usando React.createElement para renderizar los elementos solicitados
+      const app = React.createElement(
+        React.Fragment,
+        null,
+        React.createElement('h1', null, 'Con lo visto hasta ahora'),
+        React.createElement('h2', null, 'Replica este HTML'),
+        React.createElement('h3', null, 'Usando'),
+        React.createElement('h4', null, 'React.js'),
+        React.createElement('footer', null, 'Suerte!')
+      );
+
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(app);
+    </script>
   </body>
 </html>
